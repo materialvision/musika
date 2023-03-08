@@ -560,7 +560,7 @@ class Utils_functions:
             write_wav(
                 f"{self.args.save_path}/{i}_{dt}.wav", self.args.sr, np.squeeze(wv)[: self.args.seconds * self.args.sr]
             )
-            print("finished")
+            return f"{self.args.save_path}/{i}_{dt}.wav"
 
     def decode_path(self, models_ls):
         critic, gen, enc, dec, enc2, dec2, gen_ema, [opt_dec, opt_disc], switch = models_ls
