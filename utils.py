@@ -11,7 +11,6 @@ from tensorflow.python.framework import random_seed
 import gradio as gr
 from scipy.io.wavfile import write as write_wav
 
-
 class Utils_functions:
     def __init__(self, args):
 
@@ -561,6 +560,7 @@ class Utils_functions:
             write_wav(
                 f"{self.args.save_path}/{i}_{dt}.wav", self.args.sr, np.squeeze(wv)[: self.args.seconds * self.args.sr]
             )
+            print("finished")
 
     def decode_path(self, models_ls):
         critic, gen, enc, dec, enc2, dec2, gen_ema, [opt_dec, opt_disc], switch = models_ls

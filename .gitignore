@@ -159,3 +159,26 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+.DS_Store
+checkpoints/ae/dec.h5
+checkpoints/ae/dec2.h5
+checkpoints/ae/enc.h5
+checkpoints/ae/enc2.h5
+checkpoints/misc/critic.h5
+checkpoints/misc/gen_ema.h5
+checkpoints/misc/gen.h5
+checkpoints/misc/opt_dec.npy
+checkpoints/misc/opt_disc.npy
+checkpoints/misc/switch.npy
+checkpoints/misc_small/critic.h5
+checkpoints/misc_small/gen_ema.h5
+checkpoints/misc_small/gen.h5
+checkpoints/misc_small/opt_dec.npy
+checkpoints/misc_small/opt_disc.npy
+checkpoints/misc_small/switch.npy
+checkpoints/techno/critic.h5
+checkpoints/techno/gen_ema.h5
+checkpoints/techno/gen.h5
+checkpoints/techno/opt_dec.npy
+checkpoints/techno/opt_disc.npy
+checkpoints/techno/switch.npy
