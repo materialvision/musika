@@ -58,13 +58,23 @@ if __name__ == "__main__":
         #models_ls = M.get_networks()
         #U = Utils_functions(args)
         print(args)
-        client.send_message("/changed", model)
+        client.send_message("/modelchanged", model)
 
+    def trunc_handler(unused_addr, hargs, trunc):
+        print("changing trunc from OSC...")
+        args.truncation = trunc
+        # initialize networks
+        #M = Models_functions(args)
+        #models_ls = M.get_networks()
+        #U = Utils_functions(args)
+        print(args)
+        client.send_message("/truncchanged", trunc)
 
     dispatcher = Dispatcher()
 
     dispatcher.map("/generate", generate_handler, "Generate")
     dispatcher.map("/model", model_handler, "Model")
+    dispatcher.map("/trunc", trunc_handler, "Trunc")
  
     server = osc_server.ThreadingOSCUDPServer(
         ("127.0.0.1", 7400), dispatcher)
